@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Container from "./container";
 import { Logo } from "./icons/logo";
+import Button from "./button";
 
 export default function Header() {
   return (
@@ -39,11 +40,11 @@ export default function Header() {
           <Link className="text-sm" href="#">
             Log in
           </Link>
-          <Link className="text-sm" href="#">
-            Sign up
-          </Link>
+          <Button href="#">
+            Sign Up
+          </Button>
         </div>
       </Container>
     </header>
-  )
+  );
 }
