@@ -13,7 +13,8 @@ module.exports = {
     },
     colors: {
       background: "#000212",
-      white: "#ffffff"
+      white: "#ffffff",
+      "white-a08" : "rgba(255, 255, 255, 0.08)"
     },
     fontSize: {
       "sm": "1.4rem",

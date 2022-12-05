@@ -1,10 +1,10 @@
-import Header from '../components/header'
-import '../styles/globals.css'
+import Header from "../components/header";
+import "../styles/globals.css";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -15,11 +15,9 @@ export default function RootLayout({
       <head />
       <body>
         <Header />
-        <main>{children}</main>
-        <footer>
-          footer
-        </footer>
+        <main className="pt-[var(--navigation-height)]">{children}</main>
+        <footer>footer</footer>
       </body>
     </html>
-  )
+  );
 }
