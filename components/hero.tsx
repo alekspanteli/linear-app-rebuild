@@ -1,13 +1,23 @@
 interface HeroProps {
-    title: string;
-    subtitle: string;
+    children: React.ReactNode
 }
 
-export default function Hero({title, subtitle} : HeroProps) {
+interface HeroElementProps {
+    children: React.ReactNode
+}
+
+export function HeroTitle({children} : HeroElementProps){
+    return <h1 className="text-5xl my-6">{children}</h1>
+}
+
+export function HeroSubtitle({children} : HeroElementProps){
+    return <p className="text-lg mb-12">{children}</p>
+}
+
+export default function Hero({children} : HeroProps) {
   return (
-    <div>
-        <h1 className="text-5xl">{title}</h1>
-        <p className="text-lg">{subtitle}</p>
+    <div className="text-center">
+        {children}
     </div>
   )
 }
