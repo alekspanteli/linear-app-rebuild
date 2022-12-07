@@ -38,6 +38,7 @@ module.exports = {
       10: "4rem",
       11: "4.4rem",
       12: "4.8rem",
+      "navigation-height": "var(--navigation-height)",
     },
     backgroundImage: {
       "primary-gradient":
