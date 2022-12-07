@@ -17,7 +17,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2 text-md">
           <Logo className="h-[1.8rem] w-[1.8rem]" /> Linear
         </Link>
-        <div className={classNames("transtion-[visibility]", hamburgerMenuIsOpen ? "visible opacity-100"
+        <div className={classNames("transtion-[visibility] md:visible", hamburgerMenuIsOpen ? "visible opacity-100"
                 : "invisible opacity-0 delay-500" )}>
           <nav
             className={classNames(
