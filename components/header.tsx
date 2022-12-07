@@ -17,42 +17,46 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2 text-md">
           <Logo className="h-[1.8rem] w-[1.8rem]" /> Linear
         </Link>
-        <nav
-          className={classNames(
-            "fixed top-navigation-height left-0 h-[calc(100vh_-_var(--navigation-height))] w-full overflow-auto bg-background md:relative md:top-auto md:block md:h-auto md:w-auto md:bg-transparent",
-            hamburgerMenuIsOpen ? "" : "hidden"
-          )}
-        >
-          <ul
+        <div className={classNames("transtion-[visibility]", hamburgerMenuIsOpen ? "visible opacity-100"
+                : "invisible opacity-0 delay-500" )}>
+          <nav
             className={classNames(
-              "ml-8 flex flex-col md:flex-row md:items-center",
-              "h-full md:gap-6 [&_a]:text-md [&_a]:transition-colors md:[&_a]:text-sm [&_a:hover]:text-grey",
-              "[&_a]:flex [&_a]:h-navigation-height [&_a]:w-full [&_a]:items-center [&_li]:border-b [&_li]:border-grey-dark [&_li]:md:border-none"
-            )}
+              "fixed top-navigation-height left-0 h-[calc(100vh_-_var(--navigation-height))] w-full overflow-auto bg-background transition-opacity duration-500 md:relative md:top-auto md:block md:h-auto md:w-auto md:bg-transparent md:opacity-100",
+              hamburgerMenuIsOpen
+              ? "opacity-100"
+              : "opacity-0")}
           >
-            <li>
-              <Link href="#">Features</Link>
-            </li>
-            <li>
-              <Link href="#">Method</Link>
-            </li>
-            <li className="md:hidden lg:block">
-              <Link href="#">Customers</Link>
-            </li>
-            <li className="md:hidden lg:block">
-              <Link href="#">Changelog</Link>
-            </li>
-            <li className="md:hidden lg:block">
-              <Link href="#">Integrations</Link>
-            </li>
-            <li>
-              <Link href="#">Pricing</Link>
-            </li>
-            <li>
-              <Link href="#">Company</Link>
-            </li>
-          </ul>
-        </nav>
+            <ul
+              className={classNames(
+                "ml-8 flex flex-col md:flex-row md:items-center",
+                "h-full md:gap-6 [&_a]:text-md [&_a]:transition-colors md:[&_a]:text-sm [&_a:hover]:text-grey",
+                "[&_a]:flex [&_a]:h-navigation-height [&_a]:w-full [&_a]:items-center [&_li]:border-b [&_li]:border-grey-dark [&_li]:md:border-none"
+              )}
+            >
+              <li>
+                <Link href="#">Features</Link>
+              </li>
+              <li>
+                <Link href="#">Method</Link>
+              </li>
+              <li className="md:hidden lg:block">
+                <Link href="#">Customers</Link>
+              </li>
+              <li className="md:hidden lg:block">
+                <Link href="#">Changelog</Link>
+              </li>
+              <li className="md:hidden lg:block">
+                <Link href="#">Integrations</Link>
+              </li>
+              <li>
+                <Link href="#">Pricing</Link>
+              </li>
+              <li>
+                <Link href="#">Company</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
         <div className="ml-auto flex h-full items-center gap-6">
           <Link className="text-sm" href="#">
