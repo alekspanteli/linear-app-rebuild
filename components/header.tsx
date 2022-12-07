@@ -62,7 +62,7 @@ export default function Header() {
         </div>
 
         <button
-          className="ml-6"
+          className="ml-6 md:hidden"
           onClick={() => setHambugerMenuIsOpen((open) => !open)}
         >
           <span className="sr-only">Toggle menu</span>
